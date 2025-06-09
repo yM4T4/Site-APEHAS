@@ -1,0 +1,138 @@
+@import url('home.css');
+
+/* Banner Superior */
+.page-banner {
+    position: relative;
+    background-image: url('../img/Participe/ParticipeBackground.jpeg');
+    
+    background-size: cover; 
+    
+    background-repeat: no-repeat;
+    
+    background-position: center;
+    
+    /* MODIFICADO: Aumentando o padding para deixar o banner mais alto e mostrar mais da imagem */
+    padding: 12rem 0; 
+    
+    color: white;
+    text-align: center;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 58, 95, 0.65); 
+}
+
+.page-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Animação de Scroll */
+.hidden-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible-section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Seção Torne-se um Associado */
+#section-associe-se .associe-se-card {
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#section-associe-se .associe-se-icon {
+    font-size: 4rem;
+    color: var(--cor-destaque);
+    margin-bottom: 1.5rem;
+}
+
+#section-associe-se .associe-se-title {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#section-associe-se .associe-se-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+#section-associe-se .btn-cta-associado {
+    background-color: var(--cor-destaque);
+    color: var(--cor-primaria);
+    border: none;
+    font-weight: bold;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+#section-associe-se .btn-cta-associado:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Seção Contato Geral */
+#section-contato .contact-subheading {
+    color: var(--cor-primaria);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--cor-destaque);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+#section-contato .contact-details li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+#section-contato .contact-details i {
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    width: 40px; 
+    text-align: center;
+    margin-right: 1rem;
+}
+
+#section-contato .map-responsive {
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#section-contato .map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}

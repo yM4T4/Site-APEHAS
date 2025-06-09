@@ -254,16 +254,26 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--cor-texto-claro);
 }
 
-#associe-se-cta .btn-outline-light {
-    border-width: 2px;
+/* Novo estilo para o botão principal da CTA */
+#associe-se-cta .btn-cta-associado {
+    background-color: var(--cor-destaque); /* Fundo Amarelo/Laranja */
+    color: var(--cor-primaria);            /* Texto Azul Escuro */
+    border: 2px solid var(--cor-destaque);
     font-weight: bold;
+    padding: 0.8rem 2rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
 }
 
-#associe-se-cta .btn-outline-light:hover {
-    background-color: var(--cor-destaque);
+#associe-se-cta .btn-cta-associado:hover {
+    background-color: #e09928; /* Tom mais escuro do destaque no hover */
+    border-color: #e09928;
     color: var(--cor-primaria);
-    border-color: var(--cor-destaque);
+    transform: translateY(-3px); /* Leve efeito de "subir" no hover */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+/* A regra antiga para .btn-outline-light pode ser removida se não for mais usada aqui */
 
 /* Rodapé (Footer) */
 footer {

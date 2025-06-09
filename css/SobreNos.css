@@ -1,7 +1,3 @@
-/* css/SobreNos.css */
-
-/* Importa as variáveis de cor do arquivo principal para manter a consistência */
-/* NOTA: Para isso funcionar, as variáveis devem estar no :root do seu home.css */
 @import url('home.css'); /* Se o nome do seu arquivo principal for home.css */
 
 
@@ -15,7 +11,7 @@
 /* Seção Banner Superior */
 .page-banner {
     position: relative;
-    background-image: url('../img/SobreNosPag/SobreNosBanner.jpeg'); /* Caminho para sua imagem de banner */
+    background-image: url('../img/SobreNosPag/SobreNosBanner.jpeg'); 
     background-size: cover;
     background-position: center;
     padding: 6rem 0;
@@ -29,12 +25,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(30, 58, 95, 0.6); /* Overlay com a cor primária semi-transparente */
+    background-color: rgba(30, 58, 95, 0.6); 
 }
 
 .page-banner .container {
-    position: relative; /* Para ficar acima do overlay */
-    z-index: 2;
+    position: relative; 
 }
 
 .page-title {
