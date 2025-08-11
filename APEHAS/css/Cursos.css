@@ -1,0 +1,97 @@
+/* css/Cursos.css */
+
+@import url('home.css'); /* Importa variáveis e estilos base do seu CSS principal */
+
+/* Banner Superior */
+.page-banner {
+    position: relative;
+    background-image: url('../img/cursos/banner-cursos.jpg'); /* Caminho para a imagem de banner dos cursos */
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 0;
+    color: white;
+    text-align: center;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 58, 95, 0.65); /* Overlay com a cor primária */
+}
+
+.page-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos dos Cards de Cursos */
+.course-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    height: 100%; /* Garante que todos os cards na mesma linha tenham a mesma altura */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.course-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz esta área crescer para preencher o espaço */
+}
+
+.course-card-title {
+    color: var(--cor-primaria);
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.course-card-text {
+    color: #6c757d; /* Cinza */
+    flex-grow: 1; /* Empurra o botão para o final */
+    margin-bottom: 1.25rem;
+}
+
+.course-card .btn-primary {
+    background-color: var(--cor-secundaria);
+    border-color: var(--cor-secundaria);
+    font-weight: bold;
+    align-self: flex-start; /* Alinha o botão à esquerda */
+    transition: background-color 0.3s ease;
+}
+
+.course-card .btn-primary:hover {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+}

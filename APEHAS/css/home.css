@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+    --cor-primaria: #1e3a5f;  
+    --cor-secundaria: #4a7ac4; 
+    --cor-destaque: #fbb03b;   
+    --cor-texto: #333333;       
+    --cor-texto-claro: #f8f9fa; 
+    --cor-fundo-claro: #f8f9fa; 
+    --cor-navbar-bg: #ffffff;   
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--cor-texto);
+    padding-top: 90px; 
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+
+.navbar {
+    background-color: var(--cor-navbar-bg) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    max-height: 60px;   
+    width: auto;
+    object-fit: contain;
+}
+.navbar-brand-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;
+    padding-left: 4px;
+}
+
+.navbar-brand-text-container .brand-line {
+    display: block;
+    font-size: 0.75rem;   
+    color: var(--cor-primaria);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.navbar-nav .nav-link {
+    color: var(--cor-primaria) !important;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+    opacity: 1;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item.active .nav-link {
+    color: var(--cor-destaque) !important;
+    opacity: 1;
+}
+
+/* Estilos do Carrossel Principal (Hero Section) */
+#hero-carousel .carousel-item {
+    height: 70vh;
+    min-height: 400px;
+    background-color: #f0f0f0;
+}
+
+#hero-carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#hero-carousel .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 80%;
+    text-align: center;
+}
+
+#hero-carousel .carousel-caption h5 {
+    color: var(--cor-texto-claro);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#hero-carousel .carousel-caption p {
+    color: var(--cor-texto-claro);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#hero-carousel .btn-primary {
+    background-color: var(--cor-destaque);
+    border-color: var(--cor-destaque);
+    color: var(--cor-primaria);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.6rem 1.5rem;
+}
+
+#hero-carousel .btn-primary:hover {
+    background-color: #e09928;
+    border-color: #e09928;
+    color: var(--cor-primaria);
+}
+
+/* Estilização Unificada para Setas de Navegação dos Carrosséis */
+#hero-carousel .carousel-control-prev,
+#hero-carousel .carousel-control-next,
+#depoimentos .carousel-control-prev,
+#depoimentos .carousel-control-next {
+    width: 8%;
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#hero-carousel .carousel-control-prev:hover,
+#hero-carousel .carousel-control-next:hover,
+#depoimentos .carousel-control-prev:hover,
+#depoimentos .carousel-control-next:hover {
+    opacity: 0.9;
+}
+
+#hero-carousel .carousel-control-prev-icon,
+#hero-carousel .carousel-control-next-icon,
+#depoimentos .carousel-control-prev-icon,
+#depoimentos .carousel-control-next-icon {
+    background-color: rgba(200, 200, 200, 0.3);
+    border-radius: 50%;
+    padding: 25px;
+    background-size: 60% 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Ícone da seta "anterior" (esquerda) PRETA */
+#hero-carousel .carousel-control-prev-icon,
+#depoimentos .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+}
+
+/* Ícone da seta "próxima" (direita) PRETA */
+#hero-carousel .carousel-control-next-icon,
+#depoimentos .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
+}
+
+/* Seção "Sobre Nós" */
+#sobre-breve {
+    background-color: #fff;
+}
+
+#sobre-breve h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+#sobre-breve img {
+    max-width: 100%;
+    height: auto;
+}
+
+#sobre-breve .btn-outline-primary {
+    color: var(--cor-secundaria);
+    border-color: var(--cor-secundaria);
+    font-weight: bold;
+}
+
+#sobre-breve .btn-outline-primary:hover {
+    background-color: var(--cor-secundaria);
+    color: white;
+}
+
+/* Seção "Destaques" (Cursos/Eventos/Pilares) */
+#destaques {
+    background-color: var(--cor-fundo-claro);
+}
+
+#destaques .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#destaques .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+#destaques .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+#destaques .card-title {
+    color: var(--cor-primaria);
+}
+
+#destaques .btn-secondary {
+    background-color: var(--cor-secundaria);
+    border-color: var(--cor-secundaria);
+    color: white;
+    font-weight: bold;
+}
+
+#destaques .btn-secondary:hover {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
+
+/* Seção "Depoimentos" */
+#depoimentos {
+    background-color: #fff;
+}
+
+#depoimentos .depoimento-card {
+    text-align: center;
+    padding: 20px 40px;
+}
+
+#depoimentos .depoimento-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid var(--cor-destaque);
+}
+
+/* Seção Chamada para Ação (CTA) */
+#associe-se-cta {
+    background-color: var(--cor-primaria);
+}
+
+#associe-se-cta h2 {
+    color: var(--cor-texto-claro);
+}
+
+/* Novo estilo para o botão principal da CTA */
+#associe-se-cta .btn-cta-associado {
+    background-color: var(--cor-destaque); /* Fundo Amarelo/Laranja */
+    color: var(--cor-primaria);            /* Texto Azul Escuro */
+    border: 2px solid var(--cor-destaque);
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+#associe-se-cta .btn-cta-associado:hover {
+    background-color: #e09928; /* Tom mais escuro do destaque no hover */
+    border-color: #e09928;
+    color: var(--cor-primaria);
+    transform: translateY(-3px); /* Leve efeito de "subir" no hover */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* A regra antiga para .btn-outline-light pode ser removida se não for mais usada aqui */
+
+/* Rodapé (Footer) */
+footer {
+    background-color: var(--cor-texto); 
+    color: #ccc;                       
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+footer h5 {
+    color: var(--cor-destaque); 
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: #ccc; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--cor-destaque); 
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer .social-icons a {
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+footer hr {
+    border-top: 1px solid #555; 
+}
+
+/* Estilos de Responsividade */
+@media (max-width: 992px) { 
+    #hero-carousel .carousel-caption h5 {
+        font-size: 1.8rem;
+    }
+    #hero-carousel .carousel-caption p {
+        font-size: 1.1rem;
+    }
+    .navbar-brand-text-container .brand-line {
+        font-size: 0.7rem;
+    }
+    .navbar-brand img {
+        max-height: 55px;
+    }
+    body {
+        padding-top: 85px; 
+    }
+}
+
+@media (max-width: 768px) { 
+    body {
+        padding-top: 80px; 
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem 0.5rem;
+        text-align: center;
+    }
+
+    .navbar-brand-text-container {
+        font-size: 0.65rem; 
+        line-height: 1.15;
+    }
+    .navbar-brand img {
+        max-height: 50px; 
+        margin-right: 0.3rem !important; 
+    }
+
+
+    #hero-carousel .carousel-item {
+        height: 55vh;
+        min-height: 300px;
+    }
+    #hero-carousel .carousel-caption {
+        bottom: 8%;
+    }
+    #hero-carousel .carousel-caption h5 {
+        font-size: 1.6rem;
+    }
+    #hero-carousel .carousel-caption p {
+        font-size: 1rem;
+    }
+    #hero-carousel .btn-primary {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    #sobre-breve .text-center img {
+        margin-top: 20px;
+    }
+
+    #associe-se-cta .btn-lg {
+        width: auto;
+        max-width: 280px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+     #associe-se-cta .btn-lg.ml-2 {
+        margin-left: auto !important;
+    }
+}
+
+@media (max-width: 576px) { 
+    #hero-carousel .carousel-caption h5 {
+        font-size: 1.4rem;
+    }
+     #hero-carousel .carousel-caption p {
+        font-size: 0.9rem;
+    }
+    .navbar-brand-text-container { 
+       
+    }
+    .navbar-brand img {
+        max-height: 45px;
+    }
+     body {
+        padding-top: 75px; 
+    }
+}
