@@ -1,67 +1,90 @@
 /* css/Cursos.css */
 
-@import url('home.css'); /* Importa variáveis e estilos base do seu CSS principal */
+@import url('home.css');
 
 /* Banner Superior */
 .page-banner {
     position: relative;
-    background-image: url('../img/cursos/banner-cursos.jpg'); /* Caminho para a imagem de banner dos cursos */
+    background-image: url('../img/Cursos/banner cursos.png');
     background-size: cover;
     background-position: center;
     padding: 6rem 0;
     color: white;
     text-align: center;
 }
-
 .banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(30, 58, 95, 0.65); /* Overlay com a cor primária */
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(30, 58, 95, 0.65);
 }
-
-.page-banner .container {
-    position: relative;
-    z-index: 2;
-}
-
+.page-banner .container { position: relative; z-index: 2; }
 .page-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: white;
+    font-size: 3.5rem; font-weight: 700; color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilos dos Cards de Cursos */
+/* Nova Abordagem para os Cards de Cursos */
 .course-card {
     background-color: #fff;
+    border: 1px solid #e9ecef;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    height: 100%; /* Garante que todos os cards na mesma linha tenham a mesma altura */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    
+    /* Regra Chave: Define uma altura mínima fixa para todos os cards */
+    min-height: 480px; /* Ajuste este valor se necessário */
+    
+    /* Flexbox para organizar o conteúdo interno verticalmente */
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.course-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+.course-card-img-container {
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .course-card-img {
     width: 100%;
-    height: 200px;
+    height: 200px; /* A imagem continua com altura fixa */
     object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.course-card:hover .course-card-img {
+    transform: scale(1.05);
 }
 
 .course-card-body {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Faz esta área crescer para preencher o espaço */
+    flex-grow: 1; /* Faz esta área crescer para preencher o espaço vago */
+}
+
+.course-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.course-category {
+    background-color: var(--cor-destaque);
+    color: var(--cor-primaria);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.course-date {
+    font-size: 0.8rem;
+    color: #888;
 }
 
 .course-card-title {
@@ -69,27 +92,60 @@
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
 }
+.course-card-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.course-card-title a:hover {
+    color: var(--cor-secundaria);
+}
 
 .course-card-text {
-    color: #6c757d; /* Cinza */
-    flex-grow: 1; /* Empurra o botão para o final */
-    margin-bottom: 1.25rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    word-break: break-all;
 }
 
-.course-card .btn-primary {
-    background-color: var(--cor-secundaria);
-    border-color: var(--cor-secundaria);
+.course-card-footer {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    border-top: 1px solid #e9ecef;
+    margin-top: auto; /* Força o rodapé a ficar na parte de baixo do card */
+}
+
+.btn-read-more {
+    color: var(--cor-secundaria);
     font-weight: bold;
-    align-self: flex-start; /* Alinha o botão à esquerda */
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.btn-read-more:hover {
+    color: var(--cor-primaria);
+}
+.btn-read-more i {
+    margin-left: 0.3rem;
+    transition: transform 0.3s ease;
+}
+.btn-read-more:hover i {
+    transform: translateX(4px);
 }
 
-.course-card .btn-primary:hover {
+/* Estilos para a Paginação */
+.pagination .page-item .page-link { color: var(--cor-secundaria); }
+.pagination .page-item.active .page-link {
     background-color: var(--cor-primaria);
     border-color: var(--cor-primaria);
+    color: #fff;
 }
 
 /* Responsividade */
+@media (max-width: 992px) {
+    /* Em telas médias, removemos a altura fixa para deixar o conteúdo fluir */
+    .course-card {
+        min-height: auto;
+    }
+}
+
 @media (max-width: 768px) {
     .page-title {
         font-size: 2.5rem;

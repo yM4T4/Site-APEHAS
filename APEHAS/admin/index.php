@@ -24,7 +24,7 @@ require_once 'verifica_login.php';
                     <div class="card-body">
                         <h5 class="card-title">Gerenciar Cursos</h5>
                         <p class="card-text">Adicione, edite ou remova os cursos e oficinas que aparecerão no site.</p>
-                        <a href="gerenciar_curso.php" class="btn btn-primary">Gerenciar Cursos</a>
+                        <a href="gerenciar_cursos.php" class="btn btn-primary">Gerenciar Cursos</a>
                     </div>
                 </div>
             </div>

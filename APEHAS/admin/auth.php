@@ -1,6 +1,6 @@
 <?php
 session_start();
-$senha_correta_hash = '$2y$10$R95lQfLukMYHBYJnF0M5eOiKWmsvf9KxV0a4Chj5.LJbPC8y3PK66';
+$senha_correta_hash = '$2y$10$we7qfcL.kX8A3Bqfx5ClAeBM3mQbFuofpch/5SvxaPUwwIeTCBdUS';
 $senha_digitada = $_POST['senha'] ?? '';
 
 // verifica o hash
