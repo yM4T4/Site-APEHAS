@@ -5,8 +5,8 @@ require_once '../php/includes/db.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Validações de tamanho antes de qualquer outra coisa
-    if (strlen($_POST['titulo']) > 20) {
-        die('Erro: O título não pode ter mais de 20 caracteres.');
+    if (strlen($_POST['titulo']) > 30) {
+        die('Erro: O título não pode ter mais de 30 caracteres.');
     }
     if (strlen($_POST['categoria']) > 10) {
         die('Erro: A categoria não pode ter mais de 10 caracteres.');

@@ -1,7 +1,6 @@
 <?php
 require_once 'verifica_login.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -23,7 +22,7 @@ require_once 'verifica_login.php';
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Gerenciar Cursos</h5>
-                        <p class="card-text">Adicione, edite ou remova os cursos e oficinas que aparecerão no site.</p>
+                        <p class="card-text">Adicione, edite ou remova os cursos e oficinas do site.</p>
                         <a href="gerenciar_cursos.php" class="btn btn-primary">Gerenciar Cursos</a>
                     </div>
                 </div>
@@ -32,8 +31,8 @@ require_once 'verifica_login.php';
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Gerenciar Eventos</h5>
-                        <p class="card-text">Adicione, edite ou remova os eventos que aparecerão no site.</p>
-                        <a href="gerenciar_eventos.php" class="btn btn-primary disabled" aria-disabled="true">Gerenciar Eventos</a>
+                        <p class="card-text">Adicione, edite ou remova os eventos do site.</p>
+                        <a href="gerenciar_eventos.php" class="btn btn-primary">Gerenciar Eventos</a>
                     </div>
                 </div>
             </div>

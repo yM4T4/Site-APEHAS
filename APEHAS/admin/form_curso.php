@@ -33,8 +33,8 @@ if (isset($_GET['id'])) {
             
             <div class="form-row">
                 <div class="form-group col-md-8">
-                    <label for="titulo">Título do Curso (máx. 20 caracteres)</label>
-                    <input type="text" class="form-control" id="titulo" name="titulo" value="<?php echo htmlspecialchars($curso['titulo']); ?>" required maxlength="20">
+                    <label for="titulo">Título do Curso (máx. 30 caracteres)</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo" value="<?php echo htmlspecialchars($curso['titulo']); ?>" required maxlength="30">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="categoria">Categoria (máx. 10 caracteres)</label>
